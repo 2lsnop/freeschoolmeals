@@ -1,0 +1,38 @@
+---
+title: "10 things to do in R first"
+output: html_notebook
+---
+
+#Import the data
+
+```{r}
+freeschoolmeals <- read.csv("freeschoolmeals.csv", stringsAsFactors = FALSE)
+
+allpupils <-read.csv("allpupils.csv", stringsAsFactors = FALSE)
+
+```
+
+#Summarise the data
+
+Using the summary() function
+
+```{r}
+summary(freeschoolmeals)
+
+summary(allpupils)
+```
+#Transpose the two datasets
+
+```{r}
+fsmtransposed <- t(freeschoolmeals)
+aptransposed <- t(allpupils)
+
+```
+
+```{r}
+merge(fsmtransposed,aptransposed)
+```
+
+```{r}
+mergedtransposed <- merge(fsmtransposed,aptransposed)
+```
